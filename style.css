@@ -1,0 +1,44 @@
+html, body {
+  margin : 0%;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main {
+  height: 500px;
+  background-color: grey;
+}
+
+.nav-item a {
+  color: black;
+}
+.nav-item a:hover {
+  text-transform: uppercase;
+  color: black;
+}
+
+.highlighter :after {/*after 가상요소*/
+  display:block; /*a요소를 블록 요소라고 선언*/
+/*width:70px; /*카테고리 메뉴 밑줄의 크기를 동일하게 주기 위해 width 설정*/
+/*혹시 동일하지 않길 바란다면 width 삭제*/
+  content: '';
+  border-bottom: 3px solid black;
+  transform: scaleX(0); /*크기를 0으로 줌으로써 평상시엔 밑줄 없음*/
+  transition: transform 250ms ease-in-out; /*변형 방식*/
+}
+.highlighter a:hover:after {
+  transform: scaleX(1); /*a 속성에 hover시 기존 크기로*/
+}
+
+
+footer p {
+  font-size: 0.75rem;
+  margin: 3px 0;
+  color: grey;
+}
+.first-line {
+  border-bottom: 1px solid darkgrey;
+}
+
