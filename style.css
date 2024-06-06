@@ -8,10 +8,48 @@ body {
   font-family: "Pretendard-Regular";
 }
 main {
-  height: 500px;
-  background-color: grey;
+  height: 1000px;
+  /* background-color: grey; */ 
+}
+nav {
+  background-color: #8C5535;
 }
 
+/* .img-style {
+  object-fit: scale-down;
+} */
+
+.img-style {
+  height: 500px;
+  background-image : url(/src/image/main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 44px 0;
+}
+
+.news-card-area{
+  width: auto;
+  border: 1px solid #ebeaec;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  /* border-radius: 16px; */
+  padding: 15px;
+}
+.news-card-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.news-card-sub-title {
+  font-size: 0.7rem;
+  color: #787174;
+}
+.news-card-img-style {
+  width: 380px;
+}
 .nav-item a {
   color: black;
 }
@@ -34,6 +72,10 @@ main {
   transform: scaleX(1); /*a 속성에 hover시 기존 크기로*/
 }
 
+footer {
+  background-color: black;
+  color: white;
+}
 footer p {
   font-size: 0.75rem;
   margin: 3px 0;
