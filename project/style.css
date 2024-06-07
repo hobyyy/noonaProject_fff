@@ -1,4 +1,31 @@
+.project-title {
+  font-size: 20px;
+  padding-top: 100px;
+  padding-left: 90px;
+}
+
 .box-top {
-  height: 290px;
-  background-color: antiquewhite;
+  height: 294px;
+  background-color: white;
+}
+.accordion-button {
+  padding: 0px;
+}
+.first-img {
+  width: 100%;
+  height: 500px;
+}
+.second-img {
+  width: 100%;
+  height: 500px;
+}
+.third-img {
+  width: 100%;
+  height: 500px;
+}
+.accordion-item {
+  color: white;
+}
+.accordion-button {
+  background-color: white;
 }
