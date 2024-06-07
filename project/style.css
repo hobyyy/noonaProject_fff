@@ -29,3 +29,14 @@
 .accordion-button {
   background-color: white;
 }
+
+.accordion-body {
+  color: black;
+}
+
+.accordion {
+  -bs-accordion-active-bg: bg-white;
+}
+.button-accordion-button.collapsed {
+  background-color: white;
+}
