@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글 상세페이지</title>
+  </head>
+  <body>
+    <h1>글보기</h1>
+    <div id="post"></div>
+    <button onclick="location.href='edit.html?no=' + post.no">수정</button>
+    <button onclick="location.href='index.html'">목록</button>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const no = parseInt(params.get("no"), 10);
+
+      const data = JSON.parse(localStorage.getItem("boardData")) || [];
+      const post = data.find((item) => item.no === no);
+
+      if (post) {
+        document.getElementById("post").innerHTML = `
+                <h2>${post.title}</h2>
+                <p>${post.content}</p>
+                <p>${post.date}</p>
+            `;
+      } else {
+        document.getElementById("post").innerHTML =
+          "<p>글을 찾을 수 없습니다.</p>";
+      }
+    </script>
+  </body>
+</html>

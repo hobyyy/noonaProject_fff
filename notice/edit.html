@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글 수정하기</title>
+  </head>
+  <body>
+    <h1>글수정</h1>
+    <form id="editForm">
+      <label for="title">제목:</label><br />
+      <input type="text" id="title" name="title" required /><br />
+      <label for="content">내용:</label><br />
+      <textarea id="content" name="content" required></textarea><br /><br />
+      <button type="submit">수정</button>
+    </form>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const no = parseInt(params.get("no"), 10);
+
+      let data = JSON.parse(localStorage.getItem("boardData")) || [];
+      const post = data.find((item) => item.no === no);
+
+      if (post) {
+        document.getElementById("title").value = post.title;
+        document.getElementById("content").value = post.content;
+      }
+
+      document
+        .getElementById("editForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          post.title = document.getElementById("title").value;
+          post.content = document.getElementById("content").value;
+
+          data.sort((a, b) => b.no - a.no);
+          localStorage.setItem("boardData", JSON.stringify(data));
+          alert("글이 수정되었습니다.");
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>

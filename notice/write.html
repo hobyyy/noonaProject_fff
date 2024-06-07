@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>글쓰기</title>
+  </head>
+  <body>
+    <h1>글쓰기</h1>
+    <form id="writeForm">
+      <label for="title">제목:</label><br />
+      <input type="text" id="title" name="title" required /><br />
+      <label for="content">내용:</label><br />
+      <textarea id="content" name="content" required></textarea><br /><br />
+      <button type="submit">등록</button>
+    </form>
+
+    <script>
+      document
+        .getElementById("writeForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const title = document.getElementById("title").value;
+          const content = document.getElementById("content").value;
+          const date = new Date().toISOString().slice(0, 10);
+
+          let data = JSON.parse(localStorage.getItem("boardData")) || [];
+          const no = data.length
+            ? Math.max(...data.map((item) => item.no)) + 1
+            : 1;
+          data.push({ no, title, content, date });
+
+          // 데이터 최신순 정렬
+          data.sort((a, b) => b.no - a.no);
+          localStorage.setItem("boardData", JSON.stringify(data));
+
+          alert("글이 등록되었습니다.");
+          window.location.href = "index.html";
+        });
+    </script>
+  </body>
+</html>
