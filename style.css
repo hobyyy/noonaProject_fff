@@ -1,17 +1,54 @@
 html,
 body {
   margin: 0%;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
 }
 body {
   font-family: "Pretendard-Regular";
 }
 main {
-  height: 500px;
-  background-color: grey;
+  height: 2000px;
+}
+nav {
+  background-color: #8C5535;
 }
 
+/* .img-style {
+  object-fit: scale-down;
+} */
+
+.img-style {
+  height: 500px;
+  background-image : url(/src/image/main.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 44px 0;
+}
+
+.news-card-area{
+  width: auto;
+  border: 1px solid #ebeaec;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  /* border-radius: 16px; */
+  padding: 15px;
+}
+.news-card-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.news-card-sub-title {
+  font-size: 0.7rem;
+  color: #787174;
+}
+.news-card-img-style {
+  width: 380px;
+}
 .nav-item a {
   color: black;
 }
@@ -34,13 +71,57 @@ main {
   transform: scaleX(1); /*a 속성에 hover시 기존 크기로*/
 }
 
+
+/* .project-img1 {
+  background: url(/src/image/project_notion.jpg);
+}
+.project-img2 {
+  background: url(/src/image/project_cr8w.jpg);
+}
+.project-img3 {
+  background: url(/src/image/project_fff.png);
+} */
+
+footer {
+  background-color: black;
+  color: white;
+}
 footer p {
   font-size: 0.75rem;
   margin: 3px 0;
   color: grey;
 }
+
+
+.footer-button {
+	box-shadow: inset 0px 0px 0px 0px #ffffff;
+	background-color: #ffffff;
+  border-radius: 10px;
+	border:1px solid #dcdcdc;
+	display: inline-block;
+	cursor: pointer;
+	color: #666666;
+	font-size: 0.75rem;
+  padding: .3rem 2rem;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+.footer-button:hover {
+	background-color: #f6f6f6;
+  font-weight: bold;
+}
+
+.containers{
+  margin: 0 25%;
+}
 .first-line {
   border-bottom: 1px solid darkgrey;
+}
+.second-line p{
+  font-size: 0.85rem;
+  display: contents;
+  color: white;
+  margin-right: 15px;
 }
 
 @font-face { 
@@ -48,4 +129,58 @@ footer p {
   src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); 
   font-weight: 400; 
   font-style: normal; 
+}
+
+
+
+
+
+.swiper-slide{
+  height: 500px;
+}
+  
+#banner{ 
+  /* height: 200px; */
+  background-color: black; 
+}
+#banner .swiper-slide{ /* 스와이퍼-슬라이드 모두 배경색 어둡게 */
+  transition: 0.5s;
+  /* opacity: 0.5; */
+  position: relative;
+}
+
+#banner .swiper-slide-next, /* 가운데 슬라이드만 밝게 */
+#banner .swiper-slide-duplicate-next{
+  opacity: 1;
+  z-index: 1000;
+  overflow: visible;
+}
+
+#banner .swiper-slide-next img, /* 가운데 슬라이드 위치 및 크기 조정 */
+#banner .swiper-slide-duplicate-next img{
+  width: 50vw;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: white;
+}
+#banner .swiper-slide-duplicate-prev img{
+  height: 100%;
+  position: absolute;
+  left: 25%;
+
+}
+#banner .swiper-slide-active img {
+  height: 100%;
+  position: absolute;
+  right: 25%;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #8C5535;
+}
+.swiper-pagination-bullet-active {
+  background-color: #8C5535;
 }
