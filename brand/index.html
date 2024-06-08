@@ -11,19 +11,19 @@
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
     crossorigin="anonymous" />
     <!-- CSS -->
-     <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style.css">
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
     <nav class="navbar navbar-expand-lg">
       <div class="container-fluid">
-        <a class="navbar-brand" href="http://127.0.0.1:5500/noonaProject_fff/index.html">
+        <a class="navbar-brand" href="#">
           <img
-            src="http://127.0.0.1:5500/src/image/fff_logo_2.png"
+            src="../src/image/logo_text_wide.png"
             alt="FFF"
-            width="30"
+            width="120"
             height="24"
-          />FourFortyFour
+          />
         </a>
         <button
           class="navbar-toggler"
@@ -45,7 +45,7 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="http://127.0.0.1:5500/brand/index.html"
+                href="./brand/index.html"
                 >BRAND</a
               >
             </li>
@@ -63,25 +63,99 @@
       </div>
     </nav>
 
-    <main class="mt-5">
+
+    <main class="mt-5 mb-3">
+      <h1 class="brand_title pb-5">BRAND</h1>
       <div class="intro_box">
-        <span class="int_reason"><p>왜 4:44일까?</p></span>
-        <span class="int_four"><p>4의 의미</p></span>
-        <span class="int_vision"><p>VISION</p></span>
+        <span class="int_reason" onclick="showContent('A')"><p>왜 4:44일까?</p></span>
+        <span class="int_four" onclick="showContent('B')"><p>4의 의미</p></span>
+        <span class="int_vision" onclick="showContent('C')"><p>VISION</p></span>
+        <div class="toggle_button"></div>
       </div>
 
-      <div class="rea"></div>son
+      <div class="slide_wrapper mt-5 container">
+        <div id="contentA" class="reason_box container">
+          <img src="./img/444w-1.jpg" alt="reson1.img" class="slide sticky">
+          <img src="./img/444w-2.jpg" alt="reson2.img" class="slide sticky">
+        </div>
+        <div id="contentB" class="four_box container">
+          <img src="./img/why4-1.jpg" alt="why4-1.img" class="why1 slide">
+          <img src="./img/why4-2.jpg" alt="why4-2.img" class="why2 slide">
+          <img src="./img/why4-3.jpg" alt="why4-3.img" class="why3 slide">
+          <img src="./img/why4-4.jpg" alt="why4-4.img" class="why4 slide">
+          <img src="./img/why4-5.jpg" alt="why4-5.img" class="why5 slide">
+          <img src="./img/why4-6.jpg" alt="why4-6.img" class="why6 slide">
+        </div>
+        <div id="contentC" class="vision_box container">
+          <img src="./img/vision-1.jpg" alt="vision-1.img" class="slide">
+          <img src="./img/vision-2.jpg" alt="vision-2.img" class="slide">
+          <img src="./img/vision-3.jpg" alt="vision-3.img" class="slide">
+        </div>
+      </div>
     </main>
 
     <footer class="mt-5 p-5">
-      <div class="first-line pb-3">
-        <p>FourFortyFour Co.,ltd Lee Hyun Woo E.MAIL : fff.cs@gmail.com</p>
-        <p>ADDRESS: 8F, 342, Dobong-ro, Gangbuk-gu, Seoul, Republic of Korea</p>
-        <p>PERSONAL INFORMATION MANAGER: Lee Hyun Woo</p>
-        <p>Customer center 1522-4323</p>
-      </div>
-      <div class="second-line">
-        <p>Copyright ©FourFortyFour co., Ltd. All rights reserved. Hosting by hcs2-4 fff. Designed by eun.</p>
+      <div class="containers">
+        <div class="first-line pb-5">
+          <div class="row">
+            <div class="col-3">
+              <img src="../src/image/logo_small_brown.png" width="50" />
+              <!-- <img src="/src/image/logo_text_wide.png" height="50" /> -->
+            </div>
+            <div class="col-9 row">
+              <div class="col">
+                fourfortyfour
+                <p>프로젝트</p>
+                <p>요금제</p>
+              </div>
+              <div class="col">
+                이용안내
+                <p>커뮤니티 가이드</p>
+                <p>타 사이트 및 어플</p>
+              </div>
+              <div class="col">
+                정책
+                <p>이용약관</p>
+                <p>개인정보 처리방침</p>
+              </div>
+              <div class="col">
+                고객지원
+                <p>평일 10:00 ~ 17:00</p>
+                <a href="#" class="footer-button">문의하기</a>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <div class="second-line pt-5">
+          <div class="row">
+            <div class="second-line-first col">
+              <span>회사명</span>
+              <p>fourfortyfour</p>
+              <span>주소</span>
+              <p>서울 특별시 도봉구 덕릉로 63길 92, 지층 (창대설비)</p>
+              <span>대표</span>
+              <p>이현우</p>
+              <span>대표번호</span>            
+              <p>010-5308-0371</p>  
+            </div>
+            <div class="second-line-second">
+              <span>사업자등록번호</span>            
+              <p>107-87-88369</p>            
+              <span>통신판매업 신고번호</span>            
+              <p>2024-서울도봉-2114호</p>                      
+              <span>메일</span>
+              <p>fourfortyfour.studio@gmail.com</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">@2024 fourfourtyfour inc.</div>
+            <div class="col">
+              <i ></i>
+            </div>
+            
+          </div>
+        </div>
       </div>
     </footer>
     <!-- Bootstrap-JS -->
@@ -95,6 +169,11 @@
     crossorigin="anonymous"></script>
     <!-- GSAP -->
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.1/ScrollToPlugin.min.js"></script>
+    
+    <!-- JS -->
+    <script src="./script.js"></script>
+
   </body>
 </html>
