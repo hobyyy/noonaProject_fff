@@ -11,8 +11,12 @@
       crossorigin="anonymous"
     />
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <!--공동작업 추가받는 코드 -->
+    <script src="../common.js" type="module"></script>
   </head>
   <body>
+    <!--nav추가로 받는 코드 -->
+    <div id="nav"></div>
     <!--프로젝트 글자 들어가는 헤더 박스 -->
     <div class="project-box">
       <h1>
@@ -30,15 +34,17 @@
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#collapseOne"
-            aria-expanded="true"
+            aria-expanded="false"
             aria-controls="collapseOne"
           >
             <img src="../src/image/project_fff.png"/ class="first-img" >
           </button>
         </h2>
+        <!--글자 보이게 안보이게 id="collapseOne"
+          class="accordion-collapse collapse" 여기서 show -->
         <div
           id="collapseOne"
-          class="accordion-collapse collapse show"
+          class="accordion-collapse collapse"
           data-bs-parent="#accordionExample"
         >
           <div class="accordion-body">
@@ -135,6 +141,8 @@ fourfortyfour 다이어리는 4일에 한번 질문을 건냅니다.</pre
         </div>
       </div>
     </div>
+    <!--푸터 추가로 받는 코드-->
+    <div id="footer"></div>
     <!--자바스크립트 부트스트랩 CDN-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
