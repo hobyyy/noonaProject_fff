@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRAND 브랜드페이지</title>
+    <!-- Bootstrap-CDN -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous" />
+    <!-- CSS -->
+    <script src="common.js" type="module"></script>
+    <link rel="stylesheet" href="./brand_style.css">
+  </head>
+  <body>
+    <div id="nav"></div>
+
+    <main class="mt-5 mb-3">
+      <h1 class="brand_title pb-5">BRAND</h1>
+      <div class="intro_box">
+        <span class="int_reason" onclick="showContent('A')"><p>왜 4:44일까?</p></span>
+        <span class="int_four" onclick="showContent('B')"><p>4의 의미</p></span>
+        <span class="int_vision" onclick="showContent('C')"><p>VISION</p></span>
+        <div class="toggle_button"></div>
+      </div>
+
+      <div class="slide_wrapper mt-5 container">
+        <div id="contentA" class="reason_box container">
+          <img src="./src/image/444w-1.jpg" alt="reson1.img" class="slide sticky">
+          <img src="./src/image/444w-2.jpg" alt="reson2.img" class="slide sticky">
+        </div>
+        <div id="contentB" class="four_box container">
+          <img src="./src/image/why4-1.jpg" alt="why4-1.img" class="why1 slide">
+          <img src="./src/image/why4-2.jpg" alt="why4-2.img" class="why2 slide">
+          <img src="./src/image/why4-3.jpg" alt="why4-3.img" class="why3 slide">
+          <img src="./src/image/why4-4.jpg" alt="why4-4.img" class="why4 slide">
+          <img src="./src/image/why4-5.jpg" alt="why4-5.img" class="why5 slide">
+          <img src="./src/image/why4-6.jpg" alt="why4-6.img" class="why6 slide">
+        </div>
+        <div id="contentC" class="vision_box container">
+          <img src="./src/image/vision-1.jpg" alt="vision-1.img" class="slide">
+          <img src="./src/image/vision-2.jpg" alt="vision-2.img" class="slide">
+          <img src="./src/image/vision-3.jpg" alt="vision-3.img" class="slide">
+        </div>
+      </div>
+    </main>
+
+    <div id="footer"></div>
+    <!-- Bootstrap-JS -->
+    <script
+    src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+    <!-- JS -->
+    <script src="./script.js"></script>
+
+  </body>
+</html>

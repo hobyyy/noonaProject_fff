@@ -1,0 +1,163 @@
+/* Global */
+:root {
+  /* App Colors */
+  --color-primary:  var(--color-darkBrown);
+  --color-secondary: var(--color-blue);
+  --color-text: var(--color-black);
+
+  /* Colors */
+  --color-black:  #121212;
+  --color-darkBrown:  #2E2825;
+  --color-blue:  #7598EC;
+  --color-brown:  #B89865;
+  --color-white:  #ffffff;
+
+  /* Size */
+  --size-max-width: 1200px;
+
+  /* Font */
+  @font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Pretendard-Regular';
+  margin: 0;
+  min-width:  320px;
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color:  var(--color-text);
+}
+
+button {
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+}
+
+img{
+  display: block;
+}
+
+
+
+/* Main */
+
+main{
+  height: 1200px;
+  overflow: auto;
+}
+
+.brand_title {
+  padding:  0 12px;
+}
+
+.intro_box {
+  margin: 0 auto;
+  width: 60%;
+  height: 5rem;
+  position: relative;
+  border: max(2px, 0.1rem) solid #ccc;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+}
+
+.toggle_button{
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  width: 40%;
+  height: 5rem;
+  border: max(2px, 0.1rem) solid #ccc;
+  border-radius: 3em;
+  background-color: #ccc;
+  transition: left 300ms linear, background 400ms ease-in-out;
+}
+
+.intro_box > span {
+  width: 40%;
+  height: 5rem;
+  border-radius: 3em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.intro_box > span > p {
+  color: var(--color-black);
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 1;
+}
+
+
+/* slide_wrapper */
+ .slide_wrapper{
+  width: 100%;
+}
+
+.slide_wrapper img{
+  width: 100%;
+}
+
+
+
+/* 미디어쿼리 - 모바일버전 */
+@media screen and (max-width:768px) {
+  .intro_box {
+    width: 90%;
+  }
+  .slide_wrapper img{
+    margin: 0 auto;
+    width: 100%;
+  }
+  .brand_title {
+    padding:  0 40px;
+  }
+}
+
+
+@media screen and (min-width:1200px) {
+  .container {
+    width: 100%;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  .slide {
+    position: sticky;
+    top:  0;  
+    height: 100vh;
+    width: auto;
+  }
+}
