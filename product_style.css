@@ -33,6 +33,7 @@ body {
   width: 300px;
   margin: 20px 30px;
   text-align: center;
+  width: 300px; 
   overflow: hidden;
   transition: border-radius 0.3s;
 }

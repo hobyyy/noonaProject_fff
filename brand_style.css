@@ -141,6 +141,9 @@ main{
     margin: 0 auto;
     width: 100%;
   }
+  .brand_title {
+    padding:  0 40px;
+  }
 }
 
 
