@@ -5,28 +5,50 @@ html {
   background: #f4f4f4;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f9fa; /* 밝은 회색 배경 */
+}
 .main-header {
   background-color: #333;
   color: white;
   padding: 20px;
-  text-align: center;
+  text-align: left;
 }
 
-.product-container {
+.container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 20px;
+  justify-content: center;
+  padding: 20px 0;
+  margin: 0 auto;
 }
 
 .card {
   background: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 20rem;
-
-  margin-top: 20px;
-  margin-bottom: 20px;
+  width: 300px;
+  margin: 20px 30px;
   text-align: center;
+  overflow: hidden;
+  transition: border-radius 0.3s;
+}
+
+.card:hover {
+  border-radius: 50%;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  transition: border-radius 0.3s ease;
+}
+
+.card:hover .card-title,
+.card:hover .card-text {
+  color: #80a2b4; /* 마우스 오버시 텍스트 빨간색으로 변경 */
 }
 
 .product-image {
@@ -51,10 +73,8 @@ html {
 .H1-mg {
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-left: 0px;
+  margin-left: 1em;
   margin-right: 50px;
-  border: 1px solid red;
-  font-size: x-large;
 }
 .banner {
   width: 100%;
@@ -62,22 +82,26 @@ html {
   background-size: cover;
   background-position: center;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: white;
 }
 
-.banner-text {
-  text-align: center;
+.lt {
+  text-decoration: line-through;
 }
 
 @media (max-width: 768px) {
   .product-container {
     flex-direction: column;
     align-items: center;
+    margin-left: 0px;
   }
   .banner {
     height: 200px;
+  }
+  .card {
+    width: 100%;
   }
 }
 
