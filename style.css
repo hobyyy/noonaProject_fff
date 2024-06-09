@@ -7,19 +7,12 @@ body {
 body {
   font-family: "Pretendard-Regular";
 }
-main {
-  height: 1800px;
-}
 nav {
   background-color: #8C5535;
 }
 
-/* .img-style {
-  object-fit: scale-down;
-} */
-
 .img-style {
-  height: 500px;
+  height: 641px;
   background-image : url(/src/image/main.jpg);
   background-size: cover;
   background-position: center;
@@ -46,9 +39,11 @@ nav {
   font-size: 0.7rem;
   color: #787174;
 }
-.news-card-img-style {
-  width: 380px;
+.news-card-imgbox {
+  height: 257px;
+  overflow: hidden;
 }
+
 .nav-item a {
   color: black;
 }
@@ -83,38 +78,56 @@ nav {
 } */
 
 footer {
-  background-color: black;
+  background-color: #2E2825;
   color: white;
 }
+footer a,
 footer p {
+  display: block;
   font-size: 0.75rem;
   margin: 3px 0;
   color: grey;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
 }
 
 .footer-button-area {
-  box-shadow: inset 0px 0px 0px 0px #ffffff;
   background-color: #ffffff;
   border-radius: 10px;
   border:1px solid #dcdcdc;
-  /* display: inline-block; */
   cursor: pointer;
-  padding: .3rem 2rem;
-}
-.footer-button-area {
-  background-color: #f6f6f6;
-  font-weight: bold;
   text-align: center;
 }
+
 .footer-button {
-	color: #666666;
+  color: #666666;
 	font-size: 0.75rem;
 	text-decoration: none;
 	text-shadow: 0px 1px 0px #ffffff;
 }
+.footer-sns-area {
+  display: flex;
+}
+.footer-sns-box {
+  width: 25px;
+  height: 25px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.footer-sns-box:hover {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #7DA6B8;
+}
 .footer-sns {
-  width: 1rem;
-  margin-left: 1rem;
+  width: 16px;
 }
 .containers{
   margin: 0 25%;
@@ -128,9 +141,9 @@ footer p {
   color: white;
   margin-right: 15px;
 }
-
-
-
+.d-flex {
+  justify-content: space-between;
+}
 
 
 .swiper-slide{
@@ -189,10 +202,33 @@ footer p {
   font-weight: 400; 
   font-style: normal; 
 }
-@media (max-width: 575.98px) {
-
+@media (max-width: 768px) {
+  .logo-small {
+    width: 3rem;
+  }
+  .info {
+    display: none;
+  }
+  .swiper-slide{
+    height: 250px;
+  }
+  .d-flex {
+    justify-content: flex-end; 
+  }
 }
 
 @media (max-width: 991.98px) {
+  .highlighter :after { 
+    width: 75px;
+  }
+}
+
+@media (max-width: 1377px) {
+  .logo-small {
+    width: 5rem;
+  }
+  .logo-wide {
+    display: none;
+  }
 
 }
