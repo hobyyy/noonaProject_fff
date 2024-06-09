@@ -156,7 +156,6 @@ footer a:hover {
   justify-content: space-between;
 }
 
-
 .swiper-slide{
   height: 500px;
 }
@@ -236,8 +235,9 @@ footer a:hover {
   }
   .sub-title {
     /* margin-left: 73px; */
-    padding: 24px 73px;
-
+    padding: 24px 0;
+    font-size: 28px;
+    font-weight: 900;
   }
 }
 
