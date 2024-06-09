@@ -7,20 +7,14 @@ body {
 body {
   font-family: "Pretendard-Regular";
 }
-main {
-  height: 1800px;
-}
-nav {
-  background-color: #8c5535;
-}
 
-/* .img-style {
-  object-fit: scale-down;
-} */
+nav {
+  background-color: #8C5535;
+}
 
 .img-style {
-  height: 500px;
-  background-image: url(/src/image/main.jpg);
+  height: 641px;
+  background-image : url(/src/image/main.jpg);
   background-size: cover;
   background-position: center;
 }
@@ -29,6 +23,25 @@ nav {
   font-size: 20px;
   font-weight: bold;
   padding: 44px 0;
+}
+
+.news-card-area{
+  width: auto;
+  border: 1px solid #ebeaec;
+  box-shadow: 0px 2px 4px rgba(0,0,0,0.3);
+  padding: 15px;
+}
+.news-card-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.news-card-sub-title {
+  font-size: 0.7rem;
+  color: #787174;
+}
+.news-card-imgbox {
+  height: 257px;
+  overflow: hidden;
 }
 
 .news-card-area {
@@ -82,13 +95,59 @@ nav {
 } */
 
 footer {
-  background-color: black;
+  background-color: #2E2825;
   color: white;
 }
+footer a,
 footer p {
+  display: block;
   font-size: 0.75rem;
   margin: 3px 0;
   color: grey;
+  text-decoration: none;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+
+.footer-button-area {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border:1px solid #dcdcdc;
+  cursor: pointer;
+  text-align: center;
+}
+
+.footer-button {
+  color: #666666;
+	font-size: 0.75rem;
+	text-decoration: none;
+	text-shadow: 0px 1px 0px #ffffff;
+}
+.footer-sns-area {
+  display: flex;
+}
+.footer-sns-box {
+  width: 25px;
+  height: 25px;
+  margin-left: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.footer-sns-box:hover {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: #7DA6B8;
+}
+.footer-sns {
+  width: 16px;
+}
+.containers{
+  margin: 0 25%;
 }
 
 .footer-button-area {
@@ -121,37 +180,41 @@ footer p {
 .first-line {
   border-bottom: 1px solid darkgrey;
 }
-.second-line p {
+
+.second-line p{
   font-size: 0.85rem;
   display: contents;
   color: white;
   margin-right: 15px;
 }
 
-.swiper-slide {
+.d-flex {
+  justify-content: space-between;
+}
+
+.swiper-slide{
   height: 500px;
 }
 
-#banner {
+#banner{ 
   /* height: 200px; */
-  background-color: black;
+  background-color: black; 
 }
-#banner .swiper-slide {
-  /* 스와이퍼-슬라이드 모두 배경색 어둡게 */
+#banner .swiper-slide{ /* 스와이퍼-슬라이드 모두 배경색 어둡게 */
   transition: 0.5s;
   /* opacity: 0.5; */
   position: relative;
 }
 
 #banner .swiper-slide-next, /* 가운데 슬라이드만 밝게 */
-#banner .swiper-slide-duplicate-next {
+#banner .swiper-slide-duplicate-next{
   opacity: 1;
   z-index: 1000;
   overflow: visible;
 }
 
 #banner .swiper-slide-next img, /* 가운데 슬라이드 위치 및 크기 조정 */
-#banner .swiper-slide-duplicate-next img {
+#banner .swiper-slide-duplicate-next img{
   width: 50vw;
   position: absolute;
   top: 0;
@@ -160,7 +223,8 @@ footer p {
   transform: translate(-50%);
   background-color: white;
 }
-#banner .swiper-slide-duplicate-prev img {
+
+#banner .swiper-slide-duplicate-prev img{
   height: 100%;
   position: absolute;
   left: 25%;
@@ -172,20 +236,58 @@ footer p {
 }
 .swiper-button-next,
 .swiper-button-prev {
-  color: #8c5535;
+  color: #8C5535;
 }
 .swiper-pagination-bullet-active {
-  background-color: #8c5535;
+  background-color: #8C5535;
+  
 }
-@font-face {
-  font-family: "Pretendard-Regular";
-  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-  font-weight: 400;
-  font-style: normal;
+@font-face { 
+  font-family: 'Pretendard-Regular'; 
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff'); 
+  font-weight: 400; 
+  font-style: normal; 
 }
-@media (max-width: 575.98px) {
+@media (max-width: 768px) {
+  .logo-small {
+    width: 3rem;
+  }
+  .info {
+    display: none;
+  }
+  .swiper-slide{
+    height: 250px;
+  }
+  .d-flex {
+    justify-content: flex-end; 
+  }
+  .news-card-area {
+    width: 400px;
+  }
+  .sm-card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+  .sub-title {
+    /* margin-left: 73px; */
+    padding: 24px 73px;
+
+  }
 }
 
 @media (max-width: 991.98px) {
+  .highlighter :after { 
+    width: 75px;
+  }
+}
+
+@media (max-width: 1377px) {
+  .logo-small {
+    width: 5rem;
+  }
+  .logo-wide {
+    display: none;
+  }
+
 }
