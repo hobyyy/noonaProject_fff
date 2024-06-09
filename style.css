@@ -7,6 +7,7 @@ body {
 body {
   font-family: "Pretendard-Regular";
 }
+
 nav {
   background-color: #8C5535;
 }
@@ -43,6 +44,24 @@ nav {
   overflow: hidden;
 }
 
+.news-card-area {
+  width: auto;
+  border: 1px solid #ebeaec;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  /* border-radius: 16px; */
+  padding: 15px;
+}
+.news-card-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.news-card-sub-title {
+  font-size: 0.7rem;
+  color: #787174;
+}
+.news-card-img-style {
+  width: 380px;
+}
 .nav-item a {
   color: black;
 }
@@ -64,7 +83,6 @@ nav {
 .highlighter a:hover:after {
   transform: scaleX(1); /*a 속성에 hover시 기존 크기로*/
 }
-
 
 /* .project-img1 {
   background: url(/src/image/project_notion.jpg);
@@ -131,19 +149,48 @@ footer a:hover {
 .containers{
   margin: 0 25%;
 }
+
+.footer-button-area {
+  box-shadow: inset 0px 0px 0px 0px #ffffff;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #dcdcdc;
+  /* display: inline-block; */
+  cursor: pointer;
+  padding: 0.3rem 2rem;
+}
+.footer-button-area {
+  background-color: #f6f6f6;
+  font-weight: bold;
+  text-align: center;
+}
+.footer-button {
+  color: #666666;
+  font-size: 0.75rem;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #ffffff;
+}
+.footer-sns {
+  width: 1rem;
+  margin-left: 1rem;
+}
+.containers {
+  margin: 0 25%;
+}
 .first-line {
   border-bottom: 1px solid darkgrey;
 }
+
 .second-line p{
   font-size: 0.85rem;
   display: contents;
   color: white;
   margin-right: 15px;
 }
+
 .d-flex {
   justify-content: space-between;
 }
-
 
 .swiper-slide{
   height: 500px;
@@ -176,11 +223,11 @@ footer a:hover {
   transform: translate(-50%);
   background-color: white;
 }
+
 #banner .swiper-slide-duplicate-prev img{
   height: 100%;
   position: absolute;
   left: 25%;
-  
 }
 #banner .swiper-slide-active img {
   height: 100%;

@@ -10,9 +10,11 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="./notice_style.css" />
+    <script src="common.js" type="module"></script>
   </head>
   <body>
+    <div id="nav"></div>
     <div class="top-banner">
       <img
         src="../../src/image/logo_text.png"
@@ -26,7 +28,8 @@
         <li><a href="./faq.html">Faq</a></li>
       </ul>
     </div>
-
+    
+    <!-- FAQ 영역 -->
     <div class="container">
       <div class="page-title">
         <h1>FAQ</h1>
@@ -123,7 +126,9 @@
         </ul>
       </div>
     </div>
+    <div id="footer"></div>
     <script>
+      // FAQ 아코디언 관련
       const btns = document.querySelectorAll(".faq__question");
 
       btns.forEach((btn) => {
@@ -144,6 +149,23 @@
           btn.parentNode.classList.remove("active");
         });
       }
+      
+      // 탭 메뉴 관련
+      document.addEventListener("DOMContentLoaded", function () {
+        const links = document.querySelectorAll(".tabnav li a");
+        const currentPath = window.location.pathname;
+
+        console.log("Current Path: ", currentPath);
+
+        links.forEach((link) => {
+          console.log("Link Href: ", link.getAttribute("href"));
+
+          const linkPath = new URL(link.href).pathname;
+          if (linkPath === currentPath) {
+            link.classList.add("active");
+          }
+        });
+      });
     </script>
   </body>
 </html>

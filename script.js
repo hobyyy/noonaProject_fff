@@ -33,6 +33,7 @@ function showContent(content) {
   var contentA = document.getElementById("contentA");
   var contentB = document.getElementById("contentB");
   var contentC = document.getElementById("contentC");
+  
     // 내용 숨김
     contentA.style.display = "none";
     contentB.style.display = "none";

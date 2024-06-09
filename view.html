@@ -10,7 +10,7 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./notice_style.css" />
   </head>
   <body>
     <div class="top-banner">
@@ -18,12 +18,12 @@
     </div>
     <div class="tab">
       <ul class="tabnav">
-        <li><a href="./index.html">Notice</a></li>
-        <li><a href="./faq/index.html">Faq</a></li>
+        <li><a href="./notice.html">Notice</a></li>
+        <li><a href="./faq.html">Faq</a></li>
       </ul>
     </div>
 
-    <div class="view-container">
+    <div class="container view">
       <div id="post"></div>
       <div class="view-btn">
         <button
@@ -32,13 +32,14 @@
         >
           수정
         </button>
-        <button onclick="location.href='index.html'" class="list-btn">
+        <button onclick="location.href='./notice.html'" class="list-btn">
           목록
         </button>
       </div>
     </div>
 
     <script>
+      // View 옵션 관련
       const params = new URLSearchParams(window.location.search);
       const no = parseInt(params.get("no"), 10);
 
