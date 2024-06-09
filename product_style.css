@@ -1,0 +1,90 @@
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Pretendard-Regular;
+  background: #f4f4f4;
+}
+
+.main-header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 20rem;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.product-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-details {
+  padding: 15px;
+}
+
+.price {
+  color: green;
+  font-size: 1.2em;
+}
+
+.category {
+  margin-top: 20px;
+}
+
+.H1-mg {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 0px;
+  margin-right: 50px;
+  border: 1px solid red;
+  font-size: x-large;
+}
+.banner {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.banner-text {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .product-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .banner {
+    height: 200px;
+  }
+}
+
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
