@@ -16,14 +16,17 @@
 .first-img {
   width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 .second-img {
   width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 .third-img {
   width: 100%;
   height: 500px;
+  object-fit: cover;
 }
 .accordion-item {
   color: white;
